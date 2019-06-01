@@ -125,10 +125,10 @@ img {
 /* Section Padding */
 .section-padding-100 {
   padding-top: 100px;
-  padding-bottom: 100px; }
+ }
 
 .section-padding-100-0 {
-  padding-top: 100px;
+  
   padding-bottom: 0; }
 
 .section-padding-0-100 {
@@ -299,7 +299,7 @@ textarea:focus {
 
 /* ScrollUp */
 #scrollUp {
-  background-color: #3762f0;
+  background-color: #a9acb5;
   border-radius: 0;
   bottom: 60px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);

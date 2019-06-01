@@ -22,7 +22,7 @@
 						})
 						if($target.find('tbody tr:visible').size() === 0) {
 							var col_count = $target.find('tr').first().find('td').size();
-							var no_results = $('<tr class="filterTable_no_results"><td colspan="'+col_count+'">No results found</td></tr>')
+							var no_results = $('<tr class="filterTable_no_results"><td colspan="'+col_count+'">    لا يوجد نتائج مطابقة لبحثك </td></tr>')
 							$target.find('tbody').append(no_results);
 						}
 					}

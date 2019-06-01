@@ -1872,10 +1872,12 @@ textarea:focus {
 
 /* :: 15.0 Footer Area */
 .top-footer-area {
-  position: relative;
-  z-index: 1;
+  /*position: relative;
+  z-index: 1;*/
+
+  
   background-color: #1dc8d9;
-  padding: 40px 0;
+  /*padding: 40px 0;*/
   text-align: center;
   border-bottom: 1px solid #4c4c4c; }
   .top-footer-area .footer-logo {

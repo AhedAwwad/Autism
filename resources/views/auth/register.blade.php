@@ -13,8 +13,8 @@
                 <input type="text" class="lock" name="name" placeholder="الاسم" value="{{ old('name') }}" required autofocus>
             </div>
             <div class="w3ls-icon">
-                <span class="fa fa-envelope" aria-hidden="true" style="float: right;"></span>
-                <input type="text" class="email"  name="sp_user_name"  placeholder="اسم المستخدم" value="{{ old('user_name_sp') }}" required>
+                <span class="fa fa-user" aria-hidden="true" style="float: right;"></span>
+                <input style="background-color: #eb5273; " type="text" class="email"  name="sp_user_name"  placeholder="اسم المستخدم" value="{{ old('user_name_sp') }}" required>
             </div>
             <div class="w3ls-icon">
                 <span class="fa fa-lock" aria-hidden="true" style="float: right;"></span>

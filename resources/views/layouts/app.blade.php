@@ -34,6 +34,7 @@
 
     <link href="../form/css/font-awesome.css" rel="stylesheet">
     @yield('css')
+    @stack('css1')
     
     <!--fonts-->
     <link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
@@ -45,6 +46,23 @@
 <style type="text/css">
     @-moz-document url-prefix() {
   fieldset { display: table-cell; }
+}
+label{
+    float: right;
+}
+input{
+direction:RTL;
+}
+table {
+  border: 1px ;
+  table-layout: fixed;
+  width: 1100px;
+}
+
+th,
+td {
+  border: 1px ;
+ text-align: center;
 }
             .row{
             margin-top:40px;
@@ -64,6 +82,11 @@
         .panel-body{
             display: none;
         }
+
+.text-divider{margin: 2em 0; line-height: 0; text-align: center;}
+.text-divider span{background-color: #f5f5f5; padding: 1em;}
+.text-divider:before{ content: " "; display: block; border-top: 1px solid #e3e3e3; border-bottom: 1px solid #f7f7f7;}
+    @stack('stylee')
 </style>
 <body>
     <!-- Preloader -->
@@ -99,25 +122,26 @@
                         <div class="classynav">
                            <div class="register-login-area">
                             @if (Auth::guest())
+                                
                                 <a href="register" class="btn ">إنشاء حساب</a>
                                 <a href="login" class="btn ">تسجيل الدخول</a>
-                                <a href="chat" class="btn ">شات</a>
-                                <a href="display" class="btn ">استعراض الاطفال</a>
                                 <a href="/index" class="btn ">الصفحة الرئيسية</a>
                                   @else
                                 
-                                <a href="chat/{{Auth::user()->sp_id}}" class="btn ">شات</a>
-                                <a href="display/{{Auth::user()->sp_id}}" class="btn ">استعراض الاطفال</a>
-                                <a href="/index" class="btn ">الصفحة الرئيسية</a>
+                                <a href="../../../chat/{{Auth::user()->sp_id}}" class="btn ">شات</a>
+                                <a href="../../../display/{{Auth::user()->sp_id}}" class="btn ">استعراض الاطفال</a>
+                                <a href="../../../index" class="btn ">الصفحة الرئيسية</a>
                                 <a href="/logout" class="btn ">تسجيل الخروج</a>
+                                <a href="../../../edit/{{Auth::user()->sp_id}}" class="btn ">تعديل المعلومات</a>
 
                             @endif
                         </div>
                           <!-- Search Button -->
                             <div class="search-area">
-                                <form action="#" method="post">
-                                    <input type="search" name="search" id="search"  style="
-                                    border-color: #1dc8d9 ;
+                                <form action="../addQuery" method="post">
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}" enctype="multipart/form-data" >
+                                    <input type="search" name="querya" id="search"  
+                                    style="border-color: #1dc8d9 ;
                                     border-bottom-left-radius: 100px; ">
                                     <button style="border-radius: 10px;" type="submit"><i  style="color:#1dc8d9;" class="fa fa-search" aria-hidden="true"></i></button>
                                 </form>
@@ -160,15 +184,12 @@
         <div class="bottom-footer-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>الهاتف:</span> +44 300 303 0266</a>
                 
             </div>
             <!-- Follow Us -->
             <div class="follow-us">
                 <span>الأمانة السورية</span>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://ar-ar.facebook.com/aamalna/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             </div>
         </div>
     </footer>
@@ -185,7 +206,8 @@
     <script src="/js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="/js/active.js"></script>
-    @yield('js');
+    @yield('js')
+    @stack('js1')
     
 </body>
 

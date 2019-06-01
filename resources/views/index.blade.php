@@ -1,102 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
+@section('css')
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="../form/css/style.css" rel='stylesheet' type='text/css' />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+@endsection
+@section('js')
+<script src="/js/filter.js"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *Must* come first in the head; any other head content must come *after* these tags -->
+@endsection
+@section('content')
 
-    <!-- Title -->
-    <title>Clever - Education &amp; Courses Template | Home</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="/img/core-img/favicon.ico">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-
-</head>
-
-<body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="spinner"></div>
-    </div>
-
-    <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
-        <!-- Navbar Area -->
-        <div class="clever-main-menu">
-            <div class="classy-nav-container breakpoint-off">
-                <!-- Menu -->
-                <nav class="classy-navbar justify-content-between" id="cleverNav">
-
-                    <!-- Logo -->
-                    <a class="nav-brand" href="index.blade.php"><img src="/img/core-img/logo.png" alt=""></a>
-
-                    <!-- Navbar Toggler -->
-                    <div class="classy-navbar-toggler">
-                        <span class="navbarToggler"><span></span><span></span><span></span></span>
-                    </div>
-
-                    <!-- Menu -->
-                    <div class="classy-menu">
-
-                        <!-- Close Button -->
-                        <div class="classycloseIcon">
-                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                        </div>
-
-                        <!-- Nav Start -->
-                        <div class="classynav">
-                           <div class="register-login-area">
-                                <a href="register.html" class="btn ">إنشاء حساب</a>
-                                <a href="index-login.html" class="btn ">تسجيل الدخول</a>
-                                <a href="index.html" class="btn ">Home</a>
-                                <a href="courses.html" class="btn ">تقارير</a>
-                                <a href="instructors.html" class="btn ">شات</a>
-                                <a href="blog.html" class="btn ">استعراض الاطفال</a>
-                                <a href="contact.html" class="btn ">الصفحة الرئيسية</a>
-                            </div>
-                          <!-- Search Button -->
-                            <div class="search-area">
-                                <form action="#" method="post">
-                                    <input type="search" name="search" id="search"  style="
-                                    border-color: #1dc8d9 ;
-                                    border-bottom-left-radius: 100px; ">
-                                    <button style="border-radius: 10px;" type="submit"><i  style="color:#1dc8d9;" class="fa fa-search" aria-hidden="true"></i></button>
-                                </form>
-                            </div>
-
-                            <!-- Register / Login -->
-                            
-
-                        </div>
-                        <!-- Nav End -->
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <!-- ##### Header Area End ##### -->
-
-    <!-- ##### Hero Area Start ##### -->
     <section class="hero-area bg-img bg-overlay-2by5" style="background-image: url(/img/bg-img/3z.jpg);">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    <!-- Hero Content -->
-                    <div class="hero-content text-center">
-                        <h2></h2>
-                        <!--
-                        <a href="#" class="btn clever-btn"></a>
-                    -->
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </section>
     <!-- ##### Hero Area End ##### -->
 
@@ -108,10 +25,10 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="single-cool-facts-area text-center mb-100 wow fadeInUp" data-wow-delay="250ms">
                         <div class="icon">
-                            <img src="/img/core-img/1.png" alt="">
+                            <img src="/img/core-img/5.png" alt="">
                         </div>
-                        <h2><span class="counter">1912</span></h2>
-                        <h5>Success Stories</h5>
+                        <h2><a style="text-decoration: none;color: #1dc8d9;" href="">تحميل</a></h2>
+                        <h5>نسخة الأندرويد</h5>
                     </div>
                 </div>
 
@@ -121,8 +38,8 @@
                         <div class="icon">
                             <img src="/img/core-img/2.png" alt="">
                         </div>
-                        <h2><span class="counter">123</span></h2>
-                        <h5>Dedicated Tutors</h5>
+                        <h2><span class="counter" style="color: #1dc8d9;">{{$count_message}}</span></h2>
+                        <h5>رسالة</h5>
                     </div>
                 </div>
 
@@ -132,8 +49,8 @@
                         <div class="icon">
                             <img src="/img/core-img/3.png" alt="">
                         </div>
-                        <h2><span class="counter">89</span></h2>
-                        <h5>Scheduled Events</h5>
+                        <h2><span class="counter" style="color: #1dc8d9;">89</span></h2>
+                        <h5>عملية بحث </h5>
                     </div>
                 </div>
 
@@ -143,8 +60,8 @@
                         <div class="icon">
                             <img src="/img/core-img/4.png" alt="">
                         </div>
-                        <h2><span class="counter">56</span></h2>
-                        <h5>Available Courses</h5>
+                        <h2><span class="counter" style="color: #1dc8d9;">{{$count_child}}</span></h2>
+                        <h5>طفل و أكثر </h5>
                     </div>
                 </div>
             </div>
@@ -153,110 +70,19 @@
     <!-- ##### Cool Facts Area End ##### -->
 
     <!-- ##### Popular Courses Start ##### -->
-    <section class="popular-courses-area section-padding-100-0" style="background-image: url(/img/core-img/texture.png);">
+    <section class="popular-courses-area section-padding-100-0" style="padding-top: 0px; background-image: url(/img/core-img/texture.png);">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading">
-                        <h3>Popular Online Courses</h3>
-                    </div>
-                </div>
-            </div>
+          
+<h3 style="color: #AED6F1;font-family: monospace;"><b><i>أنا مش مريض</i></b></h3>
+<h3 style="color: #AED6F1;font-family: monospace;"><b><i>أنا عندي اضطراب توحد</i></b></h3>
 
-            <div class="row">
-                <!-- Single Popular Course -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="250ms">
-                        <img src="/img/bg-img/c1.jpg" alt="">
-                        <!-- Course Content -->
-                        <div class="course-content">
-                            <h4>English Grammar</h4>
-                            <div class="meta d-flex align-items-center">
-                                <a href="#">Sarah Parker</a>
-                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
-                                <a href="#">Art &amp; Design</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis</p>
-                        </div>
-                        <!-- Seat Rating Fee -->
-                        <div class="seat-rating-fee d-flex justify-content-between">
-                            <div class="seat-rating h-100 d-flex align-items-center">
-                                <div class="seat">
-                                    <i class="fa fa-user" aria-hidden="true"></i> 10
-                                </div>
-                                <div class="rating">
-                                    <i class="fa fa-star" aria-hidden="true"></i> 4.5
-                                </div>
-                            </div>
-                            <div class="course-fee h-100">
-                                <a href="#" class="free">Free</a>
-                            </div>
-                        </div>
+<video style="border-color: red;border-bottom-left-radius: 30%;
+" width="700"  controls>
+  <source src="/img/core-img/ved.mp4" type="video/mp4">
+  
+  
+</video>
                     </div>
-                </div>
-
-                <!-- Single Popular Course -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="500ms">
-                        <img src="img/bg-img/c2.jpg" alt="">
-                        <!-- Course Content -->
-                        <div class="course-content">
-                            <h4>Vocabulary</h4>
-                            <div class="meta d-flex align-items-center">
-                                <a href="#">Sarah Parker</a>
-                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
-                                <a href="#">Art &amp; Design</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis</p>
-                        </div>
-                        <!-- Seat Rating Fee -->
-                        <div class="seat-rating-fee d-flex justify-content-between">
-                            <div class="seat-rating h-100 d-flex align-items-center">
-                                <div class="seat">
-                                    <i class="fa fa-user" aria-hidden="true"></i> 10
-                                </div>
-                                <div class="rating">
-                                    <i class="fa fa-star" aria-hidden="true"></i> 4.5
-                                </div>
-                            </div>
-                            <div class="course-fee h-100">
-                                <a href="#">$20</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Popular Course -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="750ms">
-                        <img src="/img/bg-img/c3.jpg" alt="">
-                        <!-- Course Content -->
-                        <div class="course-content">
-                            <h4>Expository writing</h4>
-                            <div class="meta d-flex align-items-center">
-                                <a href="#">Sarah Parker</a>
-                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
-                                <a href="#">Art &amp; Design</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis</p>
-                        </div>
-                        <!-- Seat Rating Fee -->
-                        <div class="seat-rating-fee d-flex justify-content-between">
-                            <div class="seat-rating h-100 d-flex align-items-center">
-                                <div class="seat">
-                                    <i class="fa fa-user" aria-hidden="true"></i> 10
-                                </div>
-                                <div class="rating">
-                                    <i class="fa fa-star" aria-hidden="true"></i> 4.5
-                                </div>
-                            </div>
-                            <div class="course-fee h-100">
-                                <a href="#">$45</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <!-- ##### Popular Courses End ##### -->
@@ -267,7 +93,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading">
-                        <h3>The Best Tutors in Town</h3>
+                       <h3 style="color: #AED6F1;font-family: monospace;"><b><i>مراحل برنامج بيكس</i></b></h3>
                     </div>
                 </div>
             </div>
@@ -280,18 +106,13 @@
                         <div class="single-tutors-slides">
                             <!-- Tutor Thumbnail -->
                             <div class="tutor-thumbnail">
-                                <img src="/img/bg-img/t1.png" alt="">
+                                <img style="height: 167px;" src="/img/bg-img/1ss.png" alt="">
                             </div>
                             <!-- Tutor Information -->
                             <div class="tutor-information text-center">
-                                <h5>Alex Parker</h5>
-                                <span>Teacher</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet elit, sit amet tincidunt mauris ultrices vitae.</p>
-                                <div class="social-info">
-                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                </div>
+                                <h5>المرحلة الأولى</h5>
+                                <span>التبادل بالمساعدة الجسدية</span>
+                                <p>يتطلب ذلك وجود شخصين أحدهما يكون بجانب الطفل أو خلفه، والآخر يكون أمامه: ويكون هناك معزز للطفل ويفترض تعرف أشياء محببة للطفل وتوضع بطاقة مكتوب عليها الشيء المرغوب فيه والذي يريد الطفل الوصول إليه فيساعده الشخص الذي خلف الطفل في الحصول على البطاقة والذهاب إلى الشخص الذي يكون أمامه وتكون يده مفتوحة لاستلام البطاقة ويعطيه الشيء المرغوب فيه بعد أن يمدحه على ذلك فالشخص الأول يساعد جسدياً للحصول على البطاقة والوصول إلى المدرب الذي أمامه والثاني يستخدم طريقة الحث كمناداة الطفل باسمه ويذكره بأن الشيء المرغوب فيه موجود لديه</p>
                             </div>
                         </div>
 
@@ -299,18 +120,13 @@
                         <div class="single-tutors-slides">
                             <!-- Tutor Thumbnail -->
                             <div class="tutor-thumbnail">
-                                <img src="/img/bg-img/t2.png" alt="">
+                                <img style="height: 167px;" src="/img/bg-img/2s.png" alt="">
                             </div>
                             <!-- Tutor Information -->
                             <div class="tutor-information text-center">
-                                <h5>Alex Parker</h5>
-                                <span>Teacher</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet elit, sit amet tincidunt mauris ultrices vitae.</p>
-                                <div class="social-info">
-                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                </div>
+                                <h5>المرحلة الثانية</h5>
+                                <span>توسيع مفهوم التنقل التلقائي</span>
+                                <p>وفي هذه المرحلة يذهب الطفل إلى لوحة الاتصال، ويرفع الصورة التي تمثل الشيء المرغوب فيه ويذهب ليضعها في يد المدرب، ويمكن أن تزيد المسافة تدريجياً بين الطفل والمدرب.</p>
                             </div>
                         </div>
 
@@ -318,18 +134,13 @@
                         <div class="single-tutors-slides">
                             <!-- Tutor Thumbnail -->
                             <div class="tutor-thumbnail">
-                                <img src="/img/bg-img/t3.png" alt="">
+                                <img style="height: 167px;" src="/img/bg-img/3sss.png" alt="">
                             </div>
                             <!-- Tutor Information -->
                             <div class="tutor-information text-center">
-                                <h5>Alex Parker</h5>
-                                <span>Teacher</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet elit, sit amet tincidunt mauris ultrices vitae.</p>
-                                <div class="social-info">
-                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                </div>
+                                <h5>المرحلة الثالثة</h5>
+                                <span>تمييز الصور</span>
+                                <p>وفي هذه المرحلة يختار الطفل صورة من بين عدة صور وينزعها من لوحة الاتصال ويذهب ويضعها في يد المدرب، ويمكن أن يواجه المدرب الطفل على الطاولة نفسها ويضع صوراً متعددة لها علاقة بالأشياء المرغوب فيها، وبأشياء غير مرغوب فيها، وفي هذه المرحلة لا يفضل استخدام الحث اللفظي، ويغيّر ترتيب الصور حتى يتم التأكد من قدرة الطفل على التمييز</p>
                             </div>
                         </div>
 
@@ -337,18 +148,13 @@
                         <div class="single-tutors-slides">
                             <!-- Tutor Thumbnail -->
                             <div class="tutor-thumbnail">
-                                <img src="/img/bg-img/t4.png" alt="">
+                                <img style="height: 167px;" src="/img/bg-img/4sss.png" alt="">
                             </div>
                             <!-- Tutor Information -->
                             <div class="tutor-information text-center">
-                                <h5>Alex Parker</h5>
-                                <span>Teacher</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet elit, sit amet tincidunt mauris ultrices vitae.</p>
-                                <div class="social-info">
-                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                </div>
+                                <h5>المرحلة الرابعة</h5>
+                                <span>تركيب الجملة</span>
+                                <p>حيث يطلب من الطفل التوحدي استخدام كلمات متعددة لطلب أشياء، حيث يلتقط الطفل صورة أو رمزاً (أنا أريد) (أنا بدّي) ويضعها على شريط الجملة، ثم ينزع صورة ما يرغب فيها ويضعها على شريط الجملة ليكون جملة ذات معنى، توضع الصورة (أنا أريد) على الجانب الأيمن، ثم توضع صورة الشيء المرغوب فيه إلى يسار الصورة لتشكل جملة، أنا أريد ماء. ويتم استخدام الحث والتلاشي.</p>
                             </div>
                         </div>
 
@@ -356,18 +162,26 @@
                         <div class="single-tutors-slides">
                             <!-- Tutor Thumbnail -->
                             <div class="tutor-thumbnail">
-                                <img src="/img/bg-img/t5.png" alt="">
+                                <img style="height: 167px;" src="/img/bg-img/5ss.png" alt="">
                             </div>
                             <!-- Tutor Information -->
                             <div class="tutor-information text-center">
-                                <h5>Alex Parker</h5>
-                                <span>Teacher</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet elit, sit amet tincidunt mauris ultrices vitae.</p>
-                                <div class="social-info">
-                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                </div>
+                                <h5>المرحلة الخامسة</h5>
+                                <span>الاستجابة لطلب</span>
+                                <p>وفي هذه المرحلة يمكن للطفل التوحدي أن يكون قادراً على طلب أشياء بصورة تلقائية، وأن يجيب عن سؤال ماذا تريد؟ مستخدماً التعزيز الاجتماعي والمادي لكل استجابة صحيحة.</p>
+                            </div>
+                        </div>
+
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img  style="height: 167px;" src="/img/bg-img/66.png" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>المرحلة السادسة</h5>
+                                <span>التجاوب والردود التلقائية</span>
+                                <p>وفي هذه المرحلة يجيب الطفل بطريقة مناسبة عن: ماذا تريد؟ ماذا ترى؟ ماذا عندك؟ وأسئلة مشابهة.</p>
                             </div>
                         </div>
                     </div>
@@ -377,243 +191,4 @@
     </section>
     <!-- ##### Best Tutors End ##### -->
 
-    <!-- ##### Register Now Start ##### -->
-    <section class="register-now section-padding-100-0 d-flex justify-content-between align-items-center" style="background-image: url(img/core-img/texture.png);">
-        <!-- Register Contact Form -->
-        <div class="register-contact-form mb-100 wow fadeInUp" data-wow-delay="250ms">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="forms">
-                            <h4>Courses For Free</h4>
-                            <form action="#" method="post">
-                                <div class="row">
-                                    <div class="col-12 col-lg-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="text" placeholder="Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" id="email" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="phone" placeholder="Phone">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="site" placeholder="Site">
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn clever-btn w-100">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Register Now Countdown -->
-        <div class="register-now-countdown mb-100 wow fadeInUp" data-wow-delay="500ms">
-            <h3>Register Now</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet elit, sit amet tincidunt mauris ultrices vitae. Donec bibendum tortor sed mi faucibus vehicula. Sed erat lorem</p>
-            <!-- Register Countdown -->
-            <div class="register-countdown">
-                <div class="events-cd d-flex flex-wrap" data-countdown="2019/03/01"></div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Register Now End ##### -->
-
-    <!-- ##### Upcoming Events Start ##### -->
-    <section class="upcoming-events section-padding-100-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading">
-                        <h3>Upcoming events</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Single Upcoming Events -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-upcoming-events mb-50 wow fadeInUp" data-wow-delay="250ms">
-                        <!-- Events Thumb -->
-                        <div class="events-thumb">
-                            <img src="img/bg-img/e1.jpg" alt="">
-                            <h6 class="event-date">August 26</h6>
-                            <h4 class="event-title">Networking Day</h4>
-                        </div>
-                        <!-- Date & Fee -->
-                        <div class="date-fee d-flex justify-content-between">
-                            <div class="date">
-                                <p><i class="fa fa-clock"></i> August 26 @ 9:00 am</p>
-                            </div>
-                            <div class="events-fee">
-                                <a href="#">$45</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Upcoming Events -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-upcoming-events mb-50 wow fadeInUp" data-wow-delay="500ms">
-                        <!-- Events Thumb -->
-                        <div class="events-thumb">
-                            <img src="/img/bg-img/e2.jpg" alt="">
-                            <h6 class="event-date">August 7</h6>
-                            <h4 class="event-title">Open Doors Day</h4>
-                        </div>
-                        <!-- Date & Fee -->
-                        <div class="date-fee d-flex justify-content-between">
-                            <div class="date">
-                                <p><i class="fa fa-clock"></i> August 7 @ 9:00 am</p>
-                            </div>
-                            <div class="events-fee">
-                                <a href="#" class="free">Free</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Upcoming Events -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-upcoming-events mb-50 wow fadeInUp" data-wow-delay="750ms">
-                        <!-- Events Thumb -->
-                        <div class="events-thumb">
-                            <img src="/img/bg-img/e3.jpg" alt="">
-                            <h6 class="event-date">August 3</h6>
-                            <h4 class="event-title">Creative Leadership</h4>
-                        </div>
-                        <!-- Date & Fee -->
-                        <div class="date-fee d-flex justify-content-between">
-                            <div class="date">
-                                <p><i class="fa fa-clock"></i> August 3 @ 9:00 am</p>
-                            </div>
-                            <div class="events-fee">
-                                <a href="#">$45</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Upcoming Events End ##### -->
-
-    <!-- ##### Blog Area Start ##### -->
-    <section class="blog-area section-padding-100-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading">
-                        <h3>From Our Blog</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6">
-                    <div class="single-blog-area mb-100 wow fadeInUp" data-wow-delay="250ms">
-                        <img src="/img/blog-img/1.jpg" alt="">
-                        <!-- Blog Content -->
-                        <div class="blog-content">
-                            <a href="#" class="blog-headline">
-                                <h4>English Grammer</h4>
-                            </a>
-                            <div class="meta d-flex align-items-center">
-                                <a href="#">Sarah Parker</a>
-                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
-                                <a href="#">Art &amp; Design</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6">
-                    <div class="single-blog-area mb-100 wow fadeInUp" data-wow-delay="500ms">
-                        <img src="img/blog-img/2.jpg" alt="">
-                        <!-- Blog Content -->
-                        <div class="blog-content">
-                            <a href="#" class="blog-headline">
-                                <h4>English Grammer</h4>
-                            </a>
-                            <div class="meta d-flex align-items-center">
-                                <a href="#">Sarah Parker</a>
-                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
-                                <a href="#">Art &amp; Design</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Blog Area End ##### -->
-
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area">
-        <!-- Top Footer Area -->
-        <div class="top-footer-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Footer Logo -->
-                        <div class="footer-logo">
-                            <h1 style="color:#fff;
-                            font-family: Buxton Sketch;">TalkToMe</h1>
-                        </div>
-                        <!-- Copywrite -->
-                        <p><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  <i class="fa fa-heart-o" aria-hidden="true"></i> الأمانة السورية <i class="fa fa-heart-o" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank"></a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom Footer Area -->
-        <div class="bottom-footer-area d-flex justify-content-between align-items-center">
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <a href="#"><span>Phone:</span> +44 300 303 0266</a>
-                <a href="#"><span>Email:</span> info@clever.com</a>
-            </div>
-            <!-- Follow Us -->
-            <div class="follow-us">
-                <span>Follow us</span>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </footer>
-    <!-- ##### Footer Area End ##### -->
-
-    <!-- ##### All Javascript Script ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="/js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="/js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="/js/plugins/plugins.js"></script>
-    <!-- Active js -->
-    <script src="/js/active.js"></script>
-</body>
-
-</html>
+    @endsection
